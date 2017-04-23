@@ -17,6 +17,8 @@ class SpaceViewController: UIViewController {
     var line: [SCNVector3] = [SCNVector3]()
 
     var lineScene: RandomLineScene!
+    let threshold: Double = 0.002
+    let scale: Double = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,8 @@ class SpaceViewController: UIViewController {
                 if let acceleration = motion?.userAcceleration {
 
                     let updateTime = self.updateTime
-                    let constant = updateTime * updateTime / 2
+                    var constant = updateTime * updateTime / 2
+                    constant *= self.scale
 
                     var deltaX = 0.0
                     var deltaY = 0.0
@@ -52,8 +55,32 @@ class SpaceViewController: UIViewController {
                         deltaZ = Double(last.z)
                     }
 
-                    self.line.append(SCNVector3(deltaX + acceleration.x * constant, deltaY + acceleration.y * constant, deltaZ + acceleration.z * constant))
-                    self.lineScene.drawLine(points: self.line)
+                    var xAcceleration = acceleration.x
+                    var yAcceleration = acceleration.y
+                    var zAcceleration = acceleration.z
+
+                    if abs(xAcceleration) < self.threshold {
+                        xAcceleration = 0
+                    }
+                    if abs(yAcceleration) < self.threshold {
+                        yAcceleration = 0
+                    }
+                    if abs(zAcceleration) < self.threshold {
+                        zAcceleration = 0
+                    }
+
+                    if xAcceleration == 0
+                     && yAcceleration == 0
+                     && zAcceleration == 0 {
+                        return
+                    }
+
+                    let xa = xAcceleration * constant
+                    let y = yAcceleration * constant
+                    let z = zAcceleration * constant
+
+                    self.line.append(SCNVector3(xa + deltaX, y + deltaY, z + deltaZ))
+                    self.lineScene.appendNewPoint(point: SCNVector3(xa + deltaX, y + deltaY, z + deltaZ))
                 }
             }
         }

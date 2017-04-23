@@ -32,6 +32,8 @@ class ViewController: UIViewController, UIAccelerometerDelegate {
 
     var chartData: LineChartData!
 
+    let threshold: Double = 0.002
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,12 +60,43 @@ class ViewController: UIViewController, UIAccelerometerDelegate {
                     self.midLabel.text = formatter.string(from: NSNumber(value: acceleration.y * constant))!
                     self.botLabel.text = formatter.string(from: NSNumber(value: acceleration.z * constant))!
 
-                    let x = Double(self.chartDataX.count)
-                    self.chartDataX.append(ChartDataEntry(x: x, y: acceleration.x * constant))
-                    self.chartDataY.append(ChartDataEntry(x: x, y: acceleration.y * constant))
-                    self.chartDataZ.append(ChartDataEntry(x: x, y: acceleration.z * constant))
+                    var xAcceleration = acceleration.x
+                    var yAcceleration = acceleration.y
+                    var zAcceleration = acceleration.z
 
-//                    self.removeOldData()
+                    let x = Double(self.chartDataX.count)
+
+                    if abs(xAcceleration) < self.threshold {
+                        xAcceleration = 0
+                    }
+                    if abs(yAcceleration) < self.threshold {
+                        yAcceleration = 0
+                    }
+                    if abs(zAcceleration) < self.threshold {
+                        zAcceleration = 0
+                    }
+
+                    var deltaX = 0.0
+                    var deltaY = 0.0
+                    var deltaZ = 0.0
+
+                    if let last = self.chartDataX.last {
+                        deltaX = last.y
+                        deltaY = self.chartDataY.last!.y
+                        deltaZ = self.chartDataZ.last!.y
+                    }
+
+                    let xa = xAcceleration * constant
+                    let y = yAcceleration * constant
+                    let z = zAcceleration * constant
+
+                    print("x, y, z - \(xa), \(y), \(z)")
+                    print("x + d, y + d, z + d - \(xa + deltaX), \(y + deltaY), \(z + deltaZ)")
+
+
+                    self.chartDataX.append(ChartDataEntry(x: x, y: deltaX + xa))
+                    self.chartDataY.append(ChartDataEntry(x: x, y: deltaY + y))
+                    self.chartDataZ.append(ChartDataEntry(x: x, y: deltaZ + z))
 
                     self.refreshChartData()
                 }
