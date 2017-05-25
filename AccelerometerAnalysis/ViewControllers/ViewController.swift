@@ -48,7 +48,7 @@ class ViewController: UIViewController, UIAccelerometerDelegate {
                 if let acceleration = motion?.userAcceleration {
 
                     let updateTime = self.updateTime
-                    let constant = updateTime * updateTime / 2
+                    let constant = 1.0 //updateTime * updateTime / 2
 
                     let formatter = NumberFormatter()
                     formatter.decimalSeparator = "."
@@ -80,19 +80,15 @@ class ViewController: UIViewController, UIAccelerometerDelegate {
                     var deltaY = 0.0
                     var deltaZ = 0.0
 
-                    if let last = self.chartDataX.last {
-                        deltaX = last.y
-                        deltaY = self.chartDataY.last!.y
-                        deltaZ = self.chartDataZ.last!.y
-                    }
+//                    if let last = self.chartDataX.last {
+//                        deltaX = last.y
+//                        deltaY = self.chartDataY.last!.y
+//                        deltaZ = self.chartDataZ.last!.y
+//                    }
 
                     let xa = xAcceleration * constant
                     let y = yAcceleration * constant
                     let z = zAcceleration * constant
-
-                    print("x, y, z - \(xa), \(y), \(z)")
-                    print("x + d, y + d, z + d - \(xa + deltaX), \(y + deltaY), \(z + deltaZ)")
-
 
                     self.chartDataX.append(ChartDataEntry(x: x, y: deltaX + xa))
                     self.chartDataY.append(ChartDataEntry(x: x, y: deltaY + y))
@@ -102,42 +98,6 @@ class ViewController: UIViewController, UIAccelerometerDelegate {
                 }
 
             }
-
-//            if let queue = OperationQueue.current {
-//                manager.startAccelerometerUpdates(to: queue) { (data: CMAccelerometerData?, error: Error?) in
-//
-//                    if let error = error {
-//                        print(error)
-//                        return
-//                    }
-//
-//                    if let acceleration = data?.acceleration {
-//
-//                        let updateTime = self.updateTime
-//                        let gravityConstant = self.gravityConstant
-//                        let constant = updateTime * updateTime * gravityConstant
-//
-//                        let formatter = NumberFormatter()
-//                        formatter.decimalSeparator = "."
-//                        formatter.maximumFractionDigits = 4
-//                        formatter.minimumFractionDigits = 4
-//                        formatter.minimumIntegerDigits = 1
-//
-//                        self.topLabel.text = formatter.string(from: NSNumber(value: acceleration.x * constant))!
-//                        self.midLabel.text = formatter.string(from: NSNumber(value: acceleration.y * constant))!
-//                        self.botLabel.text = formatter.string(from: NSNumber(value: acceleration.z * constant))!
-//
-//                        let x = Double(self.chartDataX.count)
-//                        self.chartDataX.append(ChartDataEntry(x: x, y: acceleration.x * constant))
-//                        self.chartDataY.append(ChartDataEntry(x: x, y: acceleration.y * constant))
-//                        self.chartDataZ.append(ChartDataEntry(x: x, y: acceleration.z * constant))
-//
-//                        self.removeOldData()
-//
-//                        self.refreshChartData()
-//                    }
-//                }
-//            }
         } else {
             print("Accelerometer unavailable")
         }
@@ -152,7 +112,6 @@ class ViewController: UIViewController, UIAccelerometerDelegate {
     }
 
     func refreshChartData() {
-//        if chart.data == nil {
 
             xSet = LineChartDataSet(values: chartDataX, label: "X")
             xSet.drawCirclesEnabled = false
@@ -176,12 +135,6 @@ class ViewController: UIViewController, UIAccelerometerDelegate {
             chartData = LineChartData(dataSets: dataSets as! [IChartDataSet])
 
             chart.data = chartData
-//        } else {
-//            xSet.values = chartDataX
-//            ySet.values = chartDataY
-//            zSet.values = chartDataZ
-//            chartData.notifyDataChanged()
-//        }
     }
 }
 

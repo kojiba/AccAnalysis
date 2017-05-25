@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B10D62654B67805FAE3A28D7 /* Pods_123.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C2BB99C158D097E431BD71 /* Pods_123.framework */; };
-		BCE480969730D2CB64BE1123 /* CubeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4886BC107BAEAE0FA6BF5 /* CubeScene.swift */; };
-		BCE4815F43EE7A574EDDD3C4 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4800AF9977569BE938C16 /* SpaceViewController.swift */; };
-		BCE48A96EBCB063826B629B9 /* RandomLineScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48ED8DD2C98F4E110289E /* RandomLineScene.swift */; };
+		9A21C081CE5BF28349AE8AF0 /* Pods_accelerometerAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3517C45EEC2E63A6FC4F318B /* Pods_accelerometerAnalysis.framework */; };
+		BCE4806937FE5EA382DF0AA8 /* ThreeSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48DAF6D2B8BF1029E9A00 /* ThreeSpaceViewController.swift */; };
+		BCE4817EF39032E12D4AD954 /* 1 coords in Resources */ = {isa = PBXBuildFile; fileRef = BCE48C72FF3582D599C6A6D2 /* 1 coords */; };
+		BCE484AD7FCAC51391392B39 /* 2 in Resources */ = {isa = PBXBuildFile; fileRef = BCE489AEED97068CC6D20A6F /* 2 */; };
+		BCE484C39B8DA4914EB7C459 /* 1 in Resources */ = {isa = PBXBuildFile; fileRef = BCE4857A660B6802FB9B70F6 /* 1 */; };
+		BCE4851988FD6D4FD4E5251F /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E592F2A800F8AC207F1 /* SpaceViewController.swift */; };
+		BCE48A9777650770344EAD52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E9E1F38CFA926A669DC /* ViewController.swift */; };
+		BCE48BF46C91192B0DC6C240 /* 1 vel in Resources */ = {isa = PBXBuildFile; fileRef = BCE48AE1487AE2A21F0579C2 /* 1 vel */; };
+		BCE48C55270FBF67DC74A5DF /* RandomLineScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4816A2B9D39C3A2BC0EA4 /* RandomLineScene.swift */; };
+		BCE48E7C7FC8EC969F27DA09 /* PureDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE485238AA751E13AAF051B /* PureDataViewController.swift */; };
 		FB0E62EE1E11595700B52C85 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0E62ED1E11595700B52C85 /* CoreMotion.framework */; };
 		FB8CF5E11E0DBD55005416D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8CF5E01E0DBD55005416D9 /* AppDelegate.swift */; };
-		FB8CF5E31E0DBD55005416D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8CF5E21E0DBD55005416D9 /* ViewController.swift */; };
 		FB8CF5E61E0DBD55005416D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8CF5E41E0DBD55005416D9 /* Main.storyboard */; };
 		FB8CF5E81E0DBD55005416D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8CF5E71E0DBD55005416D9 /* Assets.xcassets */; };
 		FB8CF5EB1E0DBD55005416D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8CF5E91E0DBD55005416D9 /* LaunchScreen.storyboard */; };
@@ -21,18 +26,26 @@
 
 /* Begin PBXFileReference section */
 		098177434E7986B34BF47F74 /* Pods-123.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-123.debug.xcconfig"; path = "Pods/Target Support Files/Pods-123/Pods-123.debug.xcconfig"; sourceTree = "<group>"; };
+		1CF3EE73C1B1CA3468034F26 /* Pods-accelerometerAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-accelerometerAnalysis.release.xcconfig"; path = "Pods/Target Support Files/Pods-accelerometerAnalysis/Pods-accelerometerAnalysis.release.xcconfig"; sourceTree = "<group>"; };
+		3517C45EEC2E63A6FC4F318B /* Pods_accelerometerAnalysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_accelerometerAnalysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C2BB99C158D097E431BD71 /* Pods_123.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_123.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996BD101389A64D27CF0D0FF /* Pods-123.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-123.release.xcconfig"; path = "Pods/Target Support Files/Pods-123/Pods-123.release.xcconfig"; sourceTree = "<group>"; };
-		BCE4800AF9977569BE938C16 /* SpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
-		BCE4886BC107BAEAE0FA6BF5 /* CubeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeScene.swift; sourceTree = "<group>"; };
-		BCE48ED8DD2C98F4E110289E /* RandomLineScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLineScene.swift; sourceTree = "<group>"; };
+		B9D1D1B98DCAF71A1E6DE8E6 /* Pods-accelerometerAnalysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-accelerometerAnalysis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-accelerometerAnalysis/Pods-accelerometerAnalysis.debug.xcconfig"; sourceTree = "<group>"; };
+		BCE4816A2B9D39C3A2BC0EA4 /* RandomLineScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLineScene.swift; sourceTree = "<group>"; };
+		BCE485238AA751E13AAF051B /* PureDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureDataViewController.swift; sourceTree = "<group>"; };
+		BCE4857A660B6802FB9B70F6 /* 1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1; sourceTree = "<group>"; };
+		BCE489AEED97068CC6D20A6F /* 2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 2; path = Assets.xcassets/2; sourceTree = "<group>"; };
+		BCE48AE1487AE2A21F0579C2 /* 1 vel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1 vel"; sourceTree = "<group>"; };
+		BCE48C72FF3582D599C6A6D2 /* 1 coords */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1 coords"; sourceTree = "<group>"; };
+		BCE48DAF6D2B8BF1029E9A00 /* ThreeSpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeSpaceViewController.swift; sourceTree = "<group>"; };
+		BCE48E592F2A800F8AC207F1 /* SpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
+		BCE48E9E1F38CFA926A669DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB0E62ED1E11595700B52C85 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FB8CF5E01E0DBD55005416D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB8CF5E21E0DBD55005416D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB8CF5E51E0DBD55005416D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB8CF5E71E0DBD55005416D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB8CF5EA1E0DBD55005416D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FB8CF5EC1E0DBD55005416D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB8CF5EC1E0DBD55005416D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0E62EE1E11595700B52C85 /* CoreMotion.framework in Frameworks */,
-				B10D62654B67805FAE3A28D7 /* Pods_123.framework in Frameworks */,
+				9A21C081CE5BF28349AE8AF0 /* Pods_accelerometerAnalysis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,11 +68,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BCE48E8D08F413FCF85F0F31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCE485238AA751E13AAF051B /* PureDataViewController.swift */,
+				BCE48E9E1F38CFA926A669DC /* ViewController.swift */,
+				BCE48E592F2A800F8AC207F1 /* SpaceViewController.swift */,
+				BCE4816A2B9D39C3A2BC0EA4 /* RandomLineScene.swift */,
+				BCE48DAF6D2B8BF1029E9A00 /* ThreeSpaceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F34F83D613358275DE8CD246 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				098177434E7986B34BF47F74 /* Pods-123.debug.xcconfig */,
 				996BD101389A64D27CF0D0FF /* Pods-123.release.xcconfig */,
+				B9D1D1B98DCAF71A1E6DE8E6 /* Pods-accelerometerAnalysis.debug.xcconfig */,
+				1CF3EE73C1B1CA3468034F26 /* Pods-accelerometerAnalysis.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -69,6 +96,7 @@
 			children = (
 				FB0E62ED1E11595700B52C85 /* CoreMotion.framework */,
 				58C2BB99C158D097E431BD71 /* Pods_123.framework */,
+				3517C45EEC2E63A6FC4F318B /* Pods_accelerometerAnalysis.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,35 +104,36 @@
 		FB8CF5D41E0DBD55005416D9 = {
 			isa = PBXGroup;
 			children = (
-				FB8CF5DF1E0DBD55005416D9 /* 123 */,
+				FB8CF5DF1E0DBD55005416D9 /* AccelerometerAnalysis */,
 				FB0E62EC1E11595700B52C85 /* Frameworks */,
 				28F87E2F995269F2FC5BE1C1 /* Products */,
 				F34F83D613358275DE8CD246 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
-		FB8CF5DF1E0DBD55005416D9 /* 123 */ = {
+		FB8CF5DF1E0DBD55005416D9 /* AccelerometerAnalysis */ = {
 			isa = PBXGroup;
 			children = (
 				FB8CF5E01E0DBD55005416D9 /* AppDelegate.swift */,
-				FB8CF5E21E0DBD55005416D9 /* ViewController.swift */,
 				FB8CF5E41E0DBD55005416D9 /* Main.storyboard */,
 				FB8CF5E71E0DBD55005416D9 /* Assets.xcassets */,
 				FB8CF5E91E0DBD55005416D9 /* LaunchScreen.storyboard */,
 				FB8CF5EC1E0DBD55005416D9 /* Info.plist */,
-				BCE4800AF9977569BE938C16 /* SpaceViewController.swift */,
-				BCE48ED8DD2C98F4E110289E /* RandomLineScene.swift */,
-				BCE4886BC107BAEAE0FA6BF5 /* CubeScene.swift */,
+				BCE4857A660B6802FB9B70F6 /* 1 */,
+				BCE489AEED97068CC6D20A6F /* 2 */,
+				BCE48AE1487AE2A21F0579C2 /* 1 vel */,
+				BCE48C72FF3582D599C6A6D2 /* 1 coords */,
+				BCE48E8D08F413FCF85F0F31 /* ViewControllers */,
 			);
-			path = 123;
+			path = AccelerometerAnalysis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB8CF5DC1E0DBD55005416D9 /* 123 */ = {
+		FB8CF5DC1E0DBD55005416D9 /* accelerometerAnalysis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB8CF6051E0DBD55005416D9 /* Build configuration list for PBXNativeTarget "123" */;
+			buildConfigurationList = FB8CF6051E0DBD55005416D9 /* Build configuration list for PBXNativeTarget "accelerometerAnalysis" */;
 			buildPhases = (
 				B39EE9384EB8DD3A3383A6F0 /* [CP] Check Pods Manifest.lock */,
 				FB8CF5D91E0DBD55005416D9 /* Sources */,
@@ -117,7 +146,7 @@
 			);
 			dependencies = (
 			);
-			name = 123;
+			name = accelerometerAnalysis;
 			productName = 123;
 			productType = "com.apple.product-type.application";
 		};
@@ -133,12 +162,12 @@
 				TargetAttributes = {
 					FB8CF5DC1E0DBD55005416D9 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = U59FEWG6TJ;
+						DevelopmentTeam = D723WN4M5D;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = FB8CF5D81E0DBD55005416D9 /* Build configuration list for PBXProject "123" */;
+			buildConfigurationList = FB8CF5D81E0DBD55005416D9 /* Build configuration list for PBXProject "accelerometerAnalysis" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -151,7 +180,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB8CF5DC1E0DBD55005416D9 /* 123 */,
+				FB8CF5DC1E0DBD55005416D9 /* accelerometerAnalysis */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +193,10 @@
 				FB8CF5EB1E0DBD55005416D9 /* LaunchScreen.storyboard in Resources */,
 				FB8CF5E81E0DBD55005416D9 /* Assets.xcassets in Resources */,
 				FB8CF5E61E0DBD55005416D9 /* Main.storyboard in Resources */,
+				BCE484C39B8DA4914EB7C459 /* 1 in Resources */,
+				BCE484AD7FCAC51391392B39 /* 2 in Resources */,
+				BCE48BF46C91192B0DC6C240 /* 1 vel in Resources */,
+				BCE4817EF39032E12D4AD954 /* 1 coords in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +215,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-123/Pods-123-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-accelerometerAnalysis/Pods-accelerometerAnalysis-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B39EE9384EB8DD3A3383A6F0 /* [CP] Check Pods Manifest.lock */ = {
@@ -212,7 +245,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-123/Pods-123-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-accelerometerAnalysis/Pods-accelerometerAnalysis-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -222,11 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB8CF5E31E0DBD55005416D9 /* ViewController.swift in Sources */,
 				FB8CF5E11E0DBD55005416D9 /* AppDelegate.swift in Sources */,
-				BCE4815F43EE7A574EDDD3C4 /* SpaceViewController.swift in Sources */,
-				BCE48A96EBCB063826B629B9 /* RandomLineScene.swift in Sources */,
-				BCE480969730D2CB64BE1123 /* CubeScene.swift in Sources */,
+				BCE48E7C7FC8EC969F27DA09 /* PureDataViewController.swift in Sources */,
+				BCE48A9777650770344EAD52 /* ViewController.swift in Sources */,
+				BCE4851988FD6D4FD4E5251F /* SpaceViewController.swift in Sources */,
+				BCE48C55270FBF67DC74A5DF /* RandomLineScene.swift in Sources */,
+				BCE4806937FE5EA382DF0AA8 /* ThreeSpaceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,14 +379,14 @@
 		};
 		FB8CF6061E0DBD55005416D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 098177434E7986B34BF47F74 /* Pods-123.debug.xcconfig */;
+			baseConfigurationReference = B9D1D1B98DCAF71A1E6DE8E6 /* Pods-accelerometerAnalysis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U59FEWG6TJ;
-				INFOPLIST_FILE = 123/Info.plist;
+				DEVELOPMENT_TEAM = D723WN4M5D;
+				INFOPLIST_FILE = "$(SRCROOT)/AccelerometerAnalysis/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kiggit.Kiggit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kojiba.accelerationAnalysis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -360,14 +394,14 @@
 		};
 		FB8CF6071E0DBD55005416D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 996BD101389A64D27CF0D0FF /* Pods-123.release.xcconfig */;
+			baseConfigurationReference = 1CF3EE73C1B1CA3468034F26 /* Pods-accelerometerAnalysis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U59FEWG6TJ;
-				INFOPLIST_FILE = 123/Info.plist;
+				DEVELOPMENT_TEAM = D723WN4M5D;
+				INFOPLIST_FILE = "$(SRCROOT)/AccelerometerAnalysis/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kiggit.Kiggit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kojiba.accelerationAnalysis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -376,7 +410,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB8CF5D81E0DBD55005416D9 /* Build configuration list for PBXProject "123" */ = {
+		FB8CF5D81E0DBD55005416D9 /* Build configuration list for PBXProject "accelerometerAnalysis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB8CF6031E0DBD55005416D9 /* Debug */,
@@ -385,7 +419,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB8CF6051E0DBD55005416D9 /* Build configuration list for PBXNativeTarget "123" */ = {
+		FB8CF6051E0DBD55005416D9 /* Build configuration list for PBXNativeTarget "accelerometerAnalysis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB8CF6061E0DBD55005416D9 /* Debug */,

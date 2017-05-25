@@ -15,21 +15,33 @@ class RandomLineScene: SCNScene {
 
     override init() {
         super.init()
-//        setupCameraNode()
         drawAxis()
     }
 
+
     func setupCameraNode() {
         let camera = SCNCamera()
-        camera.automaticallyAdjustsZRange = true
-        
+        camera.automaticallyAdjustsZRange = false
+
+        let zIndex = 35.0
+        camera.zNear = zIndex
+        camera.zFar = -zIndex
+
         let cameraNode = SCNNode()
         cameraNode.camera = camera
-        cameraNode.position = SCNVector3Make(0, 0, 10)
+        cameraNode.position = SCNVector3Make(0, 0, Float(zIndex))
         rootNode.addChildNode(cameraNode)
     }
 
-    var lastPoint: SCNVector3 = SCNVector3(0,0,0)
+    func setup3dCameraNode() {
+        let camera = SCNCamera()
+        let cameraNode = SCNNode()
+        cameraNode.camera = camera
+        cameraNode.position = SCNVector3Make(2,2,7)
+        rootNode.addChildNode(cameraNode)
+    }
+
+    var lastPoint: SCNVector3 = SCNVector3(0, 0, 0)
 
     func appendNewPoint(point: SCNVector3) {
         let line = createLineFromPoints(first: lastPoint, second: point)
@@ -48,8 +60,6 @@ class RandomLineScene: SCNScene {
 
         let line = SCNGeometry(sources: [geometry], elements: [element])
 
-//        line.firstMaterial?.lightingModel = .blinn
-//        line.firstMaterial?.emission.contents = color
         line.firstMaterial?.diffuse.contents = color
 
         let node = SCNNode(geometry: line)
@@ -57,11 +67,16 @@ class RandomLineScene: SCNScene {
     }
 
     func drawAxis() {
-        let x = createLineFromPoints(first: SCNVector3(0, 0, 0), second: SCNVector3(20, 0, 0), color: UIColor.red)
-        let y = createLineFromPoints(first: SCNVector3(0, 0, 0), second: SCNVector3(0, 20, 0), color: UIColor.green)
-        let z = createLineFromPoints(first: SCNVector3(0, 0, 0), second: SCNVector3(0, 0, 20), color: UIColor.blue)
+        let constantEnd = 20
+        let x = createLineFromPoints(first: SCNVector3(-constantEnd, 0, 0), second: SCNVector3(constantEnd, 0, 0), color: UIColor.red)
+        let xa = createLineFromPoints(first: SCNVector3(constantEnd - 1, -1, 0), second: SCNVector3(constantEnd, 0, 0), color: UIColor.red)
 
-        let nodes = [x,y,z]
+        let y = createLineFromPoints(first: SCNVector3(0, -constantEnd, 0), second: SCNVector3(0, constantEnd, 0), color: UIColor.green)
+        let ya = createLineFromPoints(first: SCNVector3(1, constantEnd - 1, 0), second: SCNVector3(0, constantEnd, 0), color: UIColor.green)
+
+        let z = createLineFromPoints(first: SCNVector3(0, 0, -constantEnd), second: SCNVector3(0, 0, constantEnd), color: UIColor.blue)
+
+        let nodes = [x, xa, y, ya, z]
         for node in nodes {
             rootNode.addChildNode(node)
         }

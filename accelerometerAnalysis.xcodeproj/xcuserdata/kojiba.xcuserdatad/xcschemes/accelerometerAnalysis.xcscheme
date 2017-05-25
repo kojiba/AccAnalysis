@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB8CF5DC1E0DBD55005416D9"
-               BuildableName = "123.app"
-               BlueprintName = "123"
-               ReferencedContainer = "container:123.xcodeproj">
+               BuildableName = "accelerometerAnalysis.app"
+               BlueprintName = "accelerometerAnalysis"
+               ReferencedContainer = "container:accelerometerAnalysis.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB8CF5DC1E0DBD55005416D9"
-            BuildableName = "123.app"
-            BlueprintName = "123"
-            ReferencedContainer = "container:123.xcodeproj">
+            BuildableName = "accelerometerAnalysis.app"
+            BlueprintName = "accelerometerAnalysis"
+            ReferencedContainer = "container:accelerometerAnalysis.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
